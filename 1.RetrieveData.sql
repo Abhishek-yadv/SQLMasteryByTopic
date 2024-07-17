@@ -23,24 +23,24 @@ SELECT * FROM salesman;
 SELECT "This is SQL Exercise, Practice and Solution";
 # Output : This is SQL Exercise, Practice and Solution
 
-/*3rd. Write a SQL query to display three numbers in three columns. */
+/*3rd. Write an SQL query to display three numbers in three columns. */
 SELECT 4,5,6;
-# Output : 	4	5	6
+# Output: 	4	5	6
 
-/* 4th. Write a SQL query to display the sum of two numbers 10 and 15 from the RDBMS server. *\
+/* 4th. Write a SQL query to display the sum of two numbers 10 and 15 from the RDBMS server. */
 SELECT 10+15;
-# Output : 25
+# Output: 25
 
 /* 5. Write an SQL query to display the result of an arithmetic expression. */
 SELECT 10 + 15 - 5 * 2;
-# Output : 15
+# Output: 15
 
-/* 6. Write a SQL statement to display specific columns such as names and commissions for all salespeople. */
+/* 6. Write an SQL statement to display specific columns such as names and commissions for all salespeople. */
 SELECT name, commission
 from salesman;
 
 /* 7. Write a query to display the columns in a specific order, such as order date, salesman ID, order number, and purchase amount for all orders.*/
--- Sample table creation and insertation
+-- Sample table creation and insertion
 CREATE TABLE orders (
     ord_no INT PRIMARY KEY,
     purch_amt DECIMAL(8, 2),
@@ -64,9 +64,9 @@ VALUES
     (70011, 75.29, '2012-08-17', 3003, 5007),
     (70013, 3045.6, '2012-04-25', 3002, 5001);
 
-SELECT  ord_date, salesman_id, ord_no,purch_amt
+SELECT  ord_date, salesman_id, ord_no, purch_amt
 FROM Orders;
-/* 8th. From the orders, write a SQL query to identify the unique salespeople ID. Return salesman_id.
+/* 8th. From the orders, write a SQL query to identify the unique salespeople ID. Return salesman_id. */
 SELECT DISTINCT  salesman_id FROM orders;
 
 
@@ -99,7 +99,7 @@ SELECT customer_id, cust_name, city, grade, salesman_id
 FROM customer
 WHERE grade = 200;
 
-/* 11. From the orders table, write a SQL query to find orders that are delivered by a salesperson with ID. 5001. Return ord_no, ord_date, purch_amt. */
+/* 11. From the orders table, write a SQL query to find orders that a salesperson with ID delivers. 5001. Return ord_no, ord_date, purch_amt. */
 SELECT ord_no, ord_date, purch_amt
 FROM  orders
 WHERE salesman_id = 5001;
